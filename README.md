@@ -9,7 +9,7 @@ Program is to obtain data (Disneystore products) from DisneyStore website (https
 # Compile and run(example):
 $ javac SearchDisneyCharacter.java
 $ java SearchDisneyCharacter -t transactionLog.txt(path to transctionlog) -u Userinfo.txt(path to userinfo) -o output.txt(path to output) -i image path
-Example: $ java SearchDisneyCharacter -t transactionLog.txt -u Userinfo.txt -o output.txt -i C:\\Users\\Jeanne\\Desktop\\phase3\\
+Example: $ java SearchDisneyCharacter -t C:\\Users\\Jeanne\\Desktop\\JavaProject\\phase3\\SearchShopDisney\\transactionLog.txt -u C:\\Users\\Jeanne\\Desktop\\JavaProject\\phase3\\SearchShopDisney\\Userinfo.txt -o C:\\Users\\Jeanne\\Desktop\\JavaProject\\phase3\\SearchShopDisney\\output.txt -i C:\\Users\\Jeanne\\Desktop\\JavaProject\\phase3\\SearchShopDisney\\
 
 # Reference
 Java in a Nutshell_ by David Flanagan Copyright (c) 1996 O'Reilly & Associates.
