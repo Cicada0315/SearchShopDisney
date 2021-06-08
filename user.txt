@@ -1,0 +1,2 @@
+ID,Password,Name,DBO,Gender,Phone#
+jean,1111,hyojin ahn,1 Jan 2000,female,1111111111

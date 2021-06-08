@@ -4,10 +4,11 @@ import java.awt.event.*;
 
 class Signup extends JFrame implements ActionListener { 
     private Container c; 
-    private JLabel title, id, password, idres, name, dob, year, gender, phone, usertype, res;
+    private JLabel title, id, password, idcheck_result, name, dob, year, gender, phone, usertype, res;
     private JTextField id_input, password_input, name_input, year_input, phone_input;  
     private JButton idcheck, confirm, reset, submit;
     private JComboBox date, month, gender_input, usertypeB; 
+    public static String empty = "";  
   
     // array of string containing dates
     private String dates[]= { 
@@ -70,11 +71,11 @@ class Signup extends JFrame implements ActionListener {
         c.add(confirm);
         confirm.setVisible(false);
         
-        idres = new JLabel(""); 
-        idres.setFont(new Font("Arial", Font.PLAIN, 15)); 
-        idres.setSize(400, 20); 
-        idres.setLocation(150, 120); 
-        c.add(idres); 
+        idcheck_result = new JLabel(""); 
+        idcheck_result.setFont(new Font("Arial", Font.PLAIN, 15)); 
+        idcheck_result.setSize(400, 20); 
+        idcheck_result.setLocation(150, 120); 
+        c.add(idcheck_result); 
         
         password = new JLabel("Password"); 
         password.setFont(new Font("Arial", Font.PLAIN, 20)); 
@@ -188,10 +189,66 @@ class Signup extends JFrame implements ActionListener {
         c.add(res); 
 
         setVisible(true);
-    } 
-
+    }
+    
+    public void resetgui(){
+        date.setSelectedIndex(0); 
+        month.setSelectedIndex(0);
+        gender_input.setSelectedIndex(0); 
+        //usertypeB.setSelectedIndex(0);
+        id_input.setText(empty); 
+        year_input.setText(empty);
+        password_input.setText(empty);
+        name_input.setText(empty);
+        phone_input.setText(empty);
+        idcheck_result.setText(empty);
+        idcheck.setVisible(true);
+        confirm.setVisible(false);
+    }
 
     public void actionPerformed(ActionEvent e) { 
-        
+        if (e.getSource() == idcheck){
+            String id= id_input.getText();
+            if((SearchDisneyCharacter.user_hash).containsKey(id)){
+                idcheck_result.setText("Id is already taken. Use different one"); 
+                id_input.setText("");
+            }
+            else{
+                idcheck_result.setText("");
+                idcheck.setVisible(false);
+                confirm.setVisible(true);
+            }
+        }else if (e.getSource() == submit) {
+            String dob_string = (String)date.getSelectedItem()+" "+ (String)month.getSelectedItem()+ " "+year_input.getText();
+            String gender_string=(String)gender_input.getSelectedItem();
+            // validation
+            if(!confirm.isVisible() || name_input.getText().isEmpty() || password_input.getText().isEmpty() || year_input.getText().isEmpty() || phone_input.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Invalid! Fill all the input and check id");
+            }/*else if(type.equals("Administrator")){
+                String code = JOptionPane.showInputDialog("Input administrator code?", null);
+                int admincode=Integer.parseInt(code);
+                if(admincode==23778905){
+                    JOptionPane.showMessageDialog(null, "Welcome to DisneyAdmin, "+ nameinput.getText());
+                    Userinfo info=new Userinfo("Admin", pinput.getText(), nameinput.getText(), dbo, gender, phoneinput.getText());
+                    SearchDisneyCharacter.userinfo.put(idinput.getText(), info);
+                    String uinfo=idinput.getText()+ ","+ "Admin"+ ","+pinput.getText()+ ","+nameinput.getText()+ ","+dbo+ ","+gender+ ","+phoneinput.getText();
+                    SearchDisneyCharacter.addinfoToFile(uinfo);
+                    resetgui();
+                    setVisible(false);
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Code is wrong. You cannot register to admin");
+                }
+            }*/
+            else{
+                JOptionPane.showMessageDialog(null, "Welcome to DisneyFamily, "+ name_input.getText());
+                User newuser=new User(id_input.getText(), password_input.getText(), name_input.getText(), dob_string, gender_string, phone_input.getText());
+                SearchDisneyCharacter.user_hash.put(id_input.getText(), newuser);
+                String user_string=id_input.getText()+ ","+password_input.getText()+ ","+name_input.getText()+ ","+dob_string+ ","+gender_string+ ","+phone_input.getText();
+                SearchDisneyCharacter.addinfoToFile(user_string);
+                resetgui();
+                setVisible(false);
+            }
+        }
     } 
 }
