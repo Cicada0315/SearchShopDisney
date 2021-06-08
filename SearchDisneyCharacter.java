@@ -11,7 +11,6 @@ public class SearchDisneyCharacter{
             reader = new BufferedReader(new FileReader(user_path));
             String line = reader.readLine();
             while (line != null) {
-                System.out.println(line);
                 String arr[]=line.split(",");
                 User user= new User(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
                 // add user to hash    
@@ -76,7 +75,7 @@ public class SearchDisneyCharacter{
                     System.err.println("-i requires a image path");
             }
         }
-
+        addUserinfoTohash();
         MySearchGUI gui=new MySearchGUI(); 
     }
 }

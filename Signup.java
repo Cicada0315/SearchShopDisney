@@ -63,7 +63,7 @@ class Signup extends JFrame implements ActionListener {
         idcheck.addActionListener(this); 
         c.add(idcheck); 
 
-        confirm = new JButton("confirm"); 
+        confirm = new JButton("confirmed"); 
         confirm.setFont(new Font("Arial", Font.PLAIN, 15)); 
         confirm.setSize(100, 20); 
         confirm.setLocation(300, 100);
@@ -207,6 +207,7 @@ class Signup extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) { 
+        //check if id is unique
         if (e.getSource() == idcheck){
             String id= id_input.getText();
             if((SearchDisneyCharacter.user_hash).containsKey(id)){
@@ -249,6 +250,8 @@ class Signup extends JFrame implements ActionListener {
                 resetgui();
                 setVisible(false);
             }
-        }
+        }else if (e.getSource() == reset) { 
+            resetgui();
+        } 
     } 
 }

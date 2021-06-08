@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class MySearchGUI extends JFrame implements ActionListener{
     private Container c;
     private JLabel title;
-    private JButton signup;
+    private JButton signup, login, logout;
 
     public MySearchGUI(){
         setTitle("Jin's SearchEngine");
@@ -28,10 +28,34 @@ public class MySearchGUI extends JFrame implements ActionListener{
         signup.setLocation(590, 50);
         signup.addActionListener(this); 
         c.add(signup);
+
+        login = new JButton("LogIn"); 
+        login.setFont(new Font("Arial", Font.PLAIN, 15)); 
+        login.setSize(100, 20); 
+        login.setLocation(700, 50);
+        login.addActionListener(this); 
+        c.add(login);
+        
+        logout = new JButton("LogOut"); 
+        logout.setFont(new Font("Arial", Font.PLAIN, 15)); 
+        logout.setSize(100, 20); 
+        logout.setLocation(700, 50);
+        logout.addActionListener(this); 
+        c.add(logout); 
+        logout.setVisible(false);
     }
+
+
     public void actionPerformed(ActionEvent e) { 
         if(e.getSource() == signup){
-            Signup register= new Signup(); 
+            Signup registerPage= new Signup(); 
+        }else if (e.getSource() == login) { 
+            Login loginPage = new Login(this);            
         }
+        else if (e.getSource() == logout) {
+            logout.setVisible(false); 
+            signup.setVisible(true);
+            login.setVisible(true);
+        } 
     }
 }
