@@ -2,9 +2,10 @@ import javax.swing.*;
 import java.awt.*; 
 import java.awt.event.*;
 
-public class MySearchGUI extends JFrame{
+public class MySearchGUI extends JFrame implements ActionListener{
     private Container c;
     private JLabel title;
+    private JButton signup;
 
     public MySearchGUI(){
         setTitle("Jin's SearchEngine");
@@ -20,5 +21,17 @@ public class MySearchGUI extends JFrame{
         title.setSize(250, 40); 
         title.setLocation(325, 100); 
         c.add(title);
+
+        signup = new JButton("SignUp"); 
+        signup.setFont(new Font("Arial", Font.PLAIN, 15)); 
+        signup.setSize(100, 20); 
+        signup.setLocation(590, 50);
+        signup.addActionListener(this); 
+        c.add(signup);
+    }
+    public void actionPerformed(ActionEvent e) { 
+        if(e.getSource() == signup){
+            Signup register= new Signup(); 
+        }
     }
 }
