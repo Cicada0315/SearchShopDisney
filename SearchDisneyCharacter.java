@@ -5,6 +5,7 @@ public class SearchDisneyCharacter{
     public static String userInfo_path ="";
     public static String image_path ="";
     public static String ouput_path ="";
+
     public static void main(String[] args) throws Exception{
         int in = 0;
         String arg;
@@ -44,5 +45,7 @@ public class SearchDisneyCharacter{
                     System.err.println("-i requires a image path");
             }
         }
+
+        MySearchGUI gui=new MySearchGUI(); 
     }
 }
