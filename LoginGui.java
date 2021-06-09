@@ -75,7 +75,6 @@ public class LoginGui extends JFrame implements ActionListener{
                     id_input.setText(empty);
                     password_input.setText(empty);
                     setVisible(false);
-                    
                     JOptionPane.showMessageDialog(null, "Welcome to SearchDisney, "+ id);
                     //SearchDisneyCharacter.addtemphash();
                     mygui.loginGui();

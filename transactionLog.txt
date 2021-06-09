@@ -1,0 +1,26 @@
+TimeStamp               |UserType| User |Tran|  Query  | Category | ID |                ProductName               | OrigPrice | DiscPrice | Available
+2021-06-09 19:42:31.574 | guest | guest | ADD | stitch | Mugs | 7200003094zes | Stitch Crashes Disney Two-Tone Coffee Mug - The Little Mermaid - Customized | 16.95 | 16.95 | Yes
+2021-06-09 19:42:31.59 | guest | guest | ADD | stitch | Clothing | 7200003095zes | Stitch Crashes Disney T-Shirt for Adults - The Little Mermaid - Customized | 19.95 | 19.95 | Yes
+2021-06-09 19:42:31.591 | guest | guest | ADD | stitch | Mugs | 7200003080zes | Stitch Crashes Disney Two-Tone Coffee Mug - The Lion King - Customized | 16.95 | 16.95 | Yes
+2021-06-09 19:42:31.592 | guest | guest | ADD | stitch | Clothing | 7200003081zes | Stitch Crashes Disney T-Shirt for Adults - The Lion King - Customized | 19.95 | 19.95 | Yes
+2021-06-09 19:42:31.593 | guest | guest | ADD | stitch | Clothing | 7200003079zes | Stitch Crashes Disney T-Shirt for Adults - Lady and the Tramp - Customized | 19.95 | 19.95 | Yes
+2021-06-09 19:42:31.593 | guest | guest | ADD | stitch | Home | 7200003078zes | Stitch Crashes Disney Two-Tone Coffee Mug - Lady and the Tramp - Customized | 16.95 | 16.95 | Yes
+2021-06-09 19:42:31.594 | guest | guest | ADD | stitch | Home | 7200003068zes | Stitch Crashes Disney Two-Tone Coffee Mug - Beauty and the Beast - Customized | 16.95 | 16.95 | Yes
+2021-06-09 19:42:31.595 | guest | guest | ADD | stitch | Clothing | 7200003069zes | Stitch Crashes Disney T-Shirt for Adults - Beauty and the Beast - Customized | 19.95 | 19.95 | Yes
+2021-06-09 19:42:31.596 | guest | guest | ADD | stitch | Games | 700304153074 | Lilo & Stitch Monopoly Game | 39.99 | 39.99 | Yes
+2021-06-09 19:42:31.597 | guest | guest | ADD | stitch | Medium Plush | 412343055126 | Stitch Weighted Plush - Medium 14'' | 39.99 | 39.99 | Yes
+2021-06-09 19:42:31.599 | guest | guest | ADD | stitch | T-Shirts & Tops | 2025058382591m | Stitch Tie-Dye Spirit Jersey for Adults - Disneyland | 69.99 | 69.99 | Yes
+2021-06-09 19:42:31.6 | guest | guest | ADD | stitch | Tech Accessories | 842978187068 | Stitch PopGrip by PopSockets | 14.99 | 14.99 | Yes
+2021-06-09 19:42:31.601 | guest | guest | ADD | stitch | MagicBand | 400933863787 | Stitch ''Vacation Mode'' MagicBand 2 | 29.99 | 29.99 | Yes
+2021-06-09 19:42:31.602 | guest | guest | ADD | stitch | Pins | toys | [] | Mickey Mouse and Friends  ''My First'' Pin Trading Starter Set | 32.99 | No
+2021-06-09 19:42:31.604 | guest | guest | ADD | stitch | Pins | toys | [] | Mickey Mouse and Friends Robots Flair Pin Set | 29.99 | No
+2021-06-09 19:42:31.604 | guest | guest | ADD | stitch | Journals & Binders | 464042557586 | Stitch Spiral Bound Sectioned Notebook - Lilo & Stitch | 14.99 | 14.99 | Yes
+2021-06-09 19:42:31.606 | guest | guest | ADD | stitch | Journals & Binders | 464032532098 | Stitch Journal | 19.99 | 19.99 | Yes
+2021-06-09 19:42:31.607 | guest | guest | ADD | stitch | Desk Accessories | 464042470526 | Stitch Pencil Case - Lilo & Stitch | 12.99 | 12.99 | Yes
+2021-06-09 19:42:31.608 | guest | guest | ADD | stitch | Water Bottles | 464022533579 | Stitch Stainless Steel Water Bottle - Lilo & Stitch | 27.99 | 27.99 | Yes
+2021-06-09 19:42:31.609 | guest | guest | ADD | stitch | Backpacks & Lunch Boxes | 458142699819 | Stitch Lunch Box | 16.99 | 16.99 | Yes
+2021-06-09 19:42:31.61 | guest | guest | ADD | stitch | Backpacks & Lunch Boxes | 458142699734 | Stitch Backpack - Personalized | 29.99 | 29.99 | Yes
+2021-06-09 19:42:31.612 | guest | guest | ADD | stitch | Water Bottles | 464022181947 | Stitch Stainless Steel Water Bottle with Built-In Straw - Lilo & Stitch | 19.99 | 19.99 | Yes
+2021-06-09 19:42:31.613 | guest | guest | ADD | stitch | Water Bottles | 400933864135 | Stitch Stainless Steel Water Bottle - Lilo & Stitch | 27.99 | 27.99 | Yes
+2021-06-09 19:42:31.614 | guest | guest | ADD | stitch | Sweaters & Sweatshirts | 5815057394325m | Stitch Costume Hoodie for Kids | 34.99 | 34.99 | Yes
+
