@@ -2,12 +2,12 @@ import javax.swing.*;
 import java.awt.*; 
 import java.awt.event.*;
 
-public class MySearchGUI extends JFrame implements ActionListener{
+public class MySearchGui extends JFrame implements ActionListener{
     private Container c;
     private JLabel title;
     private JButton signup, login, logout;
 
-    public MySearchGUI(){
+    public MySearchGui(){
         setTitle("Jin's SearchEngine");
         setBounds(400, 100, 900, 800);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -45,12 +45,17 @@ public class MySearchGUI extends JFrame implements ActionListener{
         logout.setVisible(false);
     }
 
+    public void loginGui(){
+        signup.setVisible(false);
+        login.setVisible(false);
+        logout.setVisible(true);
+    }
 
     public void actionPerformed(ActionEvent e) { 
         if(e.getSource() == signup){
-            Signup registerPage= new Signup(); 
+            SignupGui registerPage= new SignupGui(); 
         }else if (e.getSource() == login) { 
-            Login loginPage = new Login(this);            
+            LoginGui loginPage = new LoginGui(this);            
         }
         else if (e.getSource() == logout) {
             logout.setVisible(false); 

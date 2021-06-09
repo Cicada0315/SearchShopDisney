@@ -1,2 +1,3 @@
 ID,Password,Name,DBO,Gender,Phone#
-jean,1111,hyojin ahn,1 Jan 2000,female,1111111111john,2222,john lee,2 feb 2000,Male,2222222222
+jean,1111,hyojin ahn,1 Jan 2000,female,1111111111
+john,2222,john lee,2 feb 2000,Male,2222222222

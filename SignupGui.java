@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*; 
 import java.awt.event.*; 
 
-class Signup extends JFrame implements ActionListener { 
+class SignupGui extends JFrame implements ActionListener { 
     private Container c; 
     private JLabel title, id, password, idcheck_result, name, dob, year, gender, phone, usertype, res;
     private JTextField id_input, password_input, name_input, year_input, phone_input;  
@@ -29,7 +29,7 @@ class Signup extends JFrame implements ActionListener {
         "User", "Administrator"
     };*/
     
-    public Signup() { 
+    public SignupGui() { 
         setTitle("Jin's SearchEngine"); 
         setBounds(450, 200, 500, 600); 
         setResizable(false); 
@@ -245,7 +245,7 @@ class Signup extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Welcome to DisneyFamily, "+ name_input.getText());
                 User newuser=new User(id_input.getText(), password_input.getText(), name_input.getText(), dob_string, gender_string, phone_input.getText());
                 SearchDisneyCharacter.user_hash.put(id_input.getText(), newuser);
-                String user_string=id_input.getText()+ ","+password_input.getText()+ ","+name_input.getText()+ ","+dob_string+ ","+gender_string+ ","+phone_input.getText();
+                String user_string=id_input.getText()+ ","+password_input.getText()+ ","+name_input.getText()+ ","+dob_string+ ","+gender_string+ ","+phone_input.getText()+"\n";
                 SearchDisneyCharacter.addinfoToFile(user_string);
                 resetgui();
                 setVisible(false);

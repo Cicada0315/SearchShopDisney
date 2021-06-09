@@ -4,6 +4,8 @@ import java.util.*;
 public class SearchDisneyCharacter{
     public static String transctionLog_path, user_path, image_path, ouput_path ="";
     public static Hashtable<String, User> user_hash = new Hashtable<>();
+    public static boolean sucess=false;
+    public static String login_user="guest";
     //Initialization of user: add all exsisting user to hashtable when the program starts
     public static void addUserinfoTohash() { 
         BufferedReader reader;
@@ -76,6 +78,6 @@ public class SearchDisneyCharacter{
             }
         }
         addUserinfoTohash();
-        MySearchGUI gui=new MySearchGUI(); 
+        MySearchGui gui=new MySearchGui(); 
     }
 }
