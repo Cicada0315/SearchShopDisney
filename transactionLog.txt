@@ -23,4 +23,3 @@ TimeStamp               |UserType| User |Tran|  Query  | Category | ID |        
 2021-06-09 19:42:31.612 | guest | guest | ADD | stitch | Water Bottles | 464022181947 | Stitch Stainless Steel Water Bottle with Built-In Straw - Lilo & Stitch | 19.99 | 19.99 | Yes
 2021-06-09 19:42:31.613 | guest | guest | ADD | stitch | Water Bottles | 400933864135 | Stitch Stainless Steel Water Bottle - Lilo & Stitch | 27.99 | 27.99 | Yes
 2021-06-09 19:42:31.614 | guest | guest | ADD | stitch | Sweaters & Sweatshirts | 5815057394325m | Stitch Costume Hoodie for Kids | 34.99 | 34.99 | Yes
-

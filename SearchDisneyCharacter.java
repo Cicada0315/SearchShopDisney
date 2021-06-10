@@ -32,6 +32,25 @@ public class SearchDisneyCharacter{
         }
     }
 
+    //Initialization of product_hash: Add the searchList from transactionLog to Hashtable
+    public static void addLogTohash() { 
+        BufferedReader reader;
+        try { 
+            reader = new BufferedReader(new FileReader(transctionLog_path));
+            String line = reader.readLine();
+            while (line != null) {
+                String[] arr=line.split("\\|");
+                System.out.println(arr[10]);
+                Product item = new Product(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10]);
+                product_hash.put(arr[7], item);
+                line = reader.readLine();
+            }
+            reader.close();
+        } catch (IOException e) {
+                e.printStackTrace();
+        } 
+    }
+
     //add New user to user.txt
     public static void addinfoToFile(String str) { 
         try { 
@@ -128,10 +147,8 @@ public class SearchDisneyCharacter{
                     if (login_user!= "guest"){
                         usertype="user";
                     }
-            
                     Product item = new Product(timeStamp, usertype, login_user, "ADD", query, category, id, productName, origPrice, discPrice, available);
-                    product_hash.put(id, item);
-                    
+                    product_hash.put(productName, item);
                     addLogToFile(transctionLog_path, item.toString()+"\n");
                 }
                 line = reader.readLine();
@@ -140,8 +157,6 @@ public class SearchDisneyCharacter{
             System.out.println("error");
         }
     }
-
-
 
     public static void main(String[] args) throws Exception{
         int in = 0;
@@ -179,6 +194,8 @@ public class SearchDisneyCharacter{
             }
         }
         addUserinfoTohash();
+        addLogTohash();
+        System.out.println(product_hash.toString()+"\n");
         MySearchGui gui=new MySearchGui(); 
     }
 }
